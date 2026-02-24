@@ -1,0 +1,18 @@
+{
+  "name": "multipagewebsite",
+  "version": "1.0.0",
+  "description": "For this assignment we were supposed to build a complete website using Node, Express and EJS to test our knowledge of routing, templates, modular development and project organization.",
+  "license": "ISC",
+  "author": "Clara Swahn",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
+}

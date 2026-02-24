@@ -1,0 +1,25 @@
+<main class="main">
+  <% if (greekList) { %>
+    <div class="greek-card">
+      <% greekList.forEach(greek=> { %>
+        <div class="greek-card-item">
+          <a href="/<%= greek.group %>?name=<%= greek.name %>">
+            <img class="greek-image-solo" src=/images/<%=greek.image %> alt="<%= greek.name %>"/>
+          </a>
+          <h2 class="greek-title">
+            <%= greek.name %>
+          </h2>
+          <p class="greek-text">
+            Symbol: <%= greek.symbol %>
+          </p>
+          <p class="greek-text">
+            Parents: <%= greek.parents %>
+          </p>
+          <p class="greek-information">
+            <%= greek.description %>
+          </p>
+        </div>
+        <% }) %>
+    </div>
+    <% } %>
+</main>

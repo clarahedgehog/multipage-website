@@ -1,0 +1,18 @@
+<%- include("../partials/documentHead") %>
+
+  <main class="main">
+    <% if (locals.greekList) { %>
+      <% if (pageType==="greek" ) { %>
+        <div class="greek-container">
+          <% greekList.forEach(greek=> { %>
+            <div class="greek-item">
+              <a href="/<%= greek.group %>/details?name=<%= greek.name %>">
+                <img class="greek-image" src="/images/<%=greek.image %>" alt="<%= greek.name %>" />
+              </a>
+            </div>
+            <% }) %>
+        </div>
+        <% }} %>
+  </main>
+
+  <%- include("../partials/footer") %>
