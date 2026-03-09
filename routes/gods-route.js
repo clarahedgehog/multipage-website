@@ -17,18 +17,18 @@ godsRouter.get("/", (req, res) => {
 })
 
 godsRouter.get("/:name", (req, res) => {
-  let requestedGod = req.params.name
+  const requestedGod = req.params.name
 
-  if (req.params.name) {
-    requestedGod = greekGods.filter(god => god.name === req.params.name)
+  if (requestedGod) {
+    const godDetails = greekGods.filter(god => god.name === requestedGod)
+    res.render(
+      path.join(__dirname, "views/pages/greek-details-page"),
+      {
+        pageType: "greek",
+        greekList: godDetails
+      }
+    )
   }
-  res.render(
-    path.join(__dirname, "views/pages/greek-details-page"),
-    {
-      pageType: "greek",
-      greekList: requestedGod
-    }
-  )
 })
 
 export default godsRouter

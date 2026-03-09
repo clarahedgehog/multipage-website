@@ -5,7 +5,7 @@ export const greekGods = [
     symbol: "Thunderbolt",
     parents: "Cronus and Rhea",
     description: "Zeus was the King of the Gods and the god of the sky, weather, law and order, destiny and fate, and kingship. He was depicted as a regal, mature man with a sturdy figure and dark beard. His usual attributes were a lightning bolt, a royal sceptre and an eagle.",
-    image: "zeus.webp",
+    image: "zeus.webp"
   },
   {
     group: "gods",

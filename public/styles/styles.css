@@ -92,6 +92,7 @@ img:hover {
   padding: 16px;
   color: var(--text-color-white);
   margin: 16px;
+  border-radius: 10px;
 }
 
 .greek-title {
