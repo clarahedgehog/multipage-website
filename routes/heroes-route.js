@@ -16,4 +16,19 @@ heroesRouter.get("/", (req, res) => {
   )
 })
 
+heroesRouter.get("/:name", (req, res) => {
+  let requestedHero = req.params.name
+
+  if (req.params.name) {
+    requestedHero = greekHeroes.filter(hero => hero.name === req.params.name)
+  }
+  res.render(
+    path.join(__dirname, "views/pages/greek-details-page"),
+    {
+      pageType: "greek",
+      greekList: requestedHero
+    }
+  )
+})
+
 export default heroesRouter

@@ -6,7 +6,7 @@
         <div class="greek-container">
           <% greekList.forEach(greek=> { %>
             <div class="greek-item">
-              <a href="/<%= greek.group %>/details?name=<%= greek.name %>">
+              <a href="/<%= greek.group %>/<%= greek.name %>">
                 <img class="greek-image" src="/images/<%=greek.image %>" alt="<%= greek.name %>" />
               </a>
             </div>

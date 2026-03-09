@@ -16,4 +16,19 @@ monstersRouter.get("/", (req, res) => {
   )
 })
 
+monstersRouter.get("/:name", (req, res) => {
+  let requestedMonster = req.params.name
+
+  if (req.params.name) {
+    requestedMonster = greekMonsters.filter(monster => monster.name === req.params.name)
+  }
+  res.render(
+    path.join(__dirname, "views/pages/greek-details-page"),
+    {
+      pageType: "greek",
+      greekList: requestedMonster
+    }
+  )
+})
+
 export default monstersRouter
